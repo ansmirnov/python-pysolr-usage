@@ -1,2 +1,4 @@
 #+TITLE: Python pysolr usage
 #+PROPERTY: header-args :session *shell pysolr* :results silent raw
+
+** Contents                                                           :TOC_4:
