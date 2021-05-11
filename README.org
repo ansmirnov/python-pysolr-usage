@@ -7,6 +7,7 @@
   - [[#imports][Imports]]
   - [[#parameters][Parameters]]
   - [[#init-the-connection][Init the connection]]
+  - [[#add-documents][Add documents]]
   - [[#references][References]]
 
 ** System environment
@@ -37,6 +38,25 @@ SOLR_URL = os.environ.get("SOLR_URL")
 
 #+BEGIN_SRC python
 solr = pysolr.Solr(SOLR_URL, always_commit=True)
+#+END_SRC
+
+** Add documents
+
+#+BEGIN_SRC python
+solr.add([
+    {
+        "id": "doc_1",
+        "title": "A test document",
+    },
+    {
+        "id": "doc_2",
+        "title": "The Banana: Tasty or Dangerous?",
+        "_doc": [
+            { "id": "child_doc_1", "title": "peel" },
+            { "id": "child_doc_2", "title": "seed" },
+        ]
+    },
+])
 #+END_SRC
 
 ** References
