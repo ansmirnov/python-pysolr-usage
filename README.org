@@ -63,8 +63,19 @@ solr.add([
 
 ** Search
 
+Simple query:
+
 #+BEGIN_SRC python
 results = solr.search('title:Banana')
+#+END_SRC
+
+More advanced query:
+
+#+BEGIN_SRC python
+results = solr.search('title:Banana', **{
+    'hl': 'true',
+    'hl.fragsize': 10,
+})
 #+END_SRC
 
 #+BEGIN_SRC python
