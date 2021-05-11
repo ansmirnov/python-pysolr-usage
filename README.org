@@ -8,6 +8,7 @@
   - [[#parameters][Parameters]]
   - [[#init-the-connection][Init the connection]]
   - [[#add-documents][Add documents]]
+  - [[#search][Search]]
   - [[#references][References]]
 
 ** System environment
@@ -57,6 +58,18 @@ solr.add([
         ]
     },
 ])
+#+END_SRC
+
+** Search
+
+#+BEGIN_SRC python
+results = solr.search('title:Banana')
+#+END_SRC
+
+#+BEGIN_SRC python
+print("Saw {0} result(s).".format(len(results)))
+for result in results:
+    print("The title is '{0}'.".format(result['title']))
 #+END_SRC
 
 ** References
