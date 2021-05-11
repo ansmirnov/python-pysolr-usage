@@ -2,7 +2,14 @@
 #+PROPERTY: header-args :session *shell pysolr* :results silent raw
 
 ** Contents                                                           :TOC_4:
+  - [[#install-pysolr][Install pysolr]]
   - [[#references][References]]
+
+** Install pysolr
+
+#+BEGIN_SRC sh :tangle docker/build.sh
+pip install pysolr
+#+END_SRC
 
 ** References
 
