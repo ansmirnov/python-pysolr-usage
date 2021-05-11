@@ -2,3 +2,8 @@
 #+PROPERTY: header-args :session *shell pysolr* :results silent raw
 
 ** Contents                                                           :TOC_4:
+  - [[#references][References]]
+
+** References
+
+1. https://github.com/django-haystack/pysolr/
