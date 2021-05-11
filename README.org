@@ -4,6 +4,7 @@
 ** Contents                                                           :TOC_4:
   - [[#system-environment][System environment]]
   - [[#install-pysolr][Install pysolr]]
+  - [[#imports][Imports]]
   - [[#references][References]]
 
 ** System environment
@@ -14,6 +15,12 @@
 
 #+BEGIN_SRC sh :tangle docker/build.sh
 pip install pysolr
+#+END_SRC
+
+** Imports
+
+#+BEGIN_SRC python
+import pysolr
 #+END_SRC
 
 ** References
