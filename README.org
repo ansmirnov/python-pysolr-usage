@@ -5,6 +5,7 @@
   - [[#system-environment][System environment]]
   - [[#install-pysolr][Install pysolr]]
   - [[#imports][Imports]]
+  - [[#parameters][Parameters]]
   - [[#references][References]]
 
 ** System environment
@@ -20,7 +21,15 @@ pip install pysolr
 ** Imports
 
 #+BEGIN_SRC python
+import os
+
 import pysolr
+#+END_SRC
+
+** Parameters
+
+#+BEGIN_SRC python
+SOLR_URL = os.environ.get("SOLR_URL")
 #+END_SRC
 
 ** References

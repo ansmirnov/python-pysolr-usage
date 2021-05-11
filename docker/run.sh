@@ -1,1 +1,1 @@
-docker run --env-file ../.env -it pysolr-test python
+docker run --rm --link solr --env-file ../.env -it pysolr-test python
