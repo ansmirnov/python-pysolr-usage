@@ -6,6 +6,7 @@
   - [[#install-pysolr][Install pysolr]]
   - [[#imports][Imports]]
   - [[#parameters][Parameters]]
+  - [[#init-the-connection][Init the connection]]
   - [[#references][References]]
 
 ** System environment
