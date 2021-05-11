@@ -9,6 +9,7 @@
   - [[#init-the-connection][Init the connection]]
   - [[#add-documents][Add documents]]
   - [[#search][Search]]
+  - [[#traverse-a-cursor-using-its-iterator][Traverse a cursor using its iterator]]
   - [[#references][References]]
 
 ** System environment
@@ -70,6 +71,13 @@ results = solr.search('title:Banana')
 print("Saw {0} result(s).".format(len(results)))
 for result in results:
     print("The title is '{0}'.".format(result['title']))
+#+END_SRC
+
+** Traverse a cursor using its iterator
+
+#+BEGIN_SRC python
+for doc in solr.search('*:*',fl='id',sort='id ASC',cursorMark='*'):
+    print(doc['id'])
 #+END_SRC
 
 ** References
