@@ -2,8 +2,13 @@
 #+PROPERTY: header-args :session *shell pysolr* :results silent raw
 
 ** Contents                                                           :TOC_4:
+  - [[#system-environment][System environment]]
   - [[#install-pysolr][Install pysolr]]
   - [[#references][References]]
+
+** System environment
+
+- Solr 8.8.2
 
 ** Install pysolr
 
