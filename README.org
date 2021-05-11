@@ -32,6 +32,12 @@ import pysolr
 SOLR_URL = os.environ.get("SOLR_URL")
 #+END_SRC
 
+** Init the connection
+
+#+BEGIN_SRC python
+solr = pysolr.Solr(SOLR_URL, always_commit=True)
+#+END_SRC
+
 ** References
 
 1. https://github.com/django-haystack/pysolr/
