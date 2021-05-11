@@ -11,6 +11,7 @@
   - [[#search][Search]]
   - [[#traverse-a-cursor-using-its-iterator][Traverse a cursor using its iterator]]
   - [[#find-similar-documents][Find similar documents]]
+  - [[#delete][Delete]]
   - [[#references][References]]
 
 ** System environment
@@ -97,6 +98,20 @@ for doc in solr.search('*:*',fl='id',sort='id ASC',cursorMark='*'):
 #+BEGIN_SRC python
 similar = solr.more_like_this(q='id:doc_2', mltfl='text')
 similar
+#+END_SRC
+
+** Delete
+
+#+BEGIN_SRC python
+solr.delete(id='doc_1')
+#+END_SRC
+
+#+BEGIN_SRC python
+solr.delete(id=['doc_1', 'doc_2'])
+#+END_SRC
+
+#+BEGIN_SRC python
+solr.delete(q='*:*')
 #+END_SRC
 
 ** References
