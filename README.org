@@ -10,6 +10,7 @@
   - [[#add-documents][Add documents]]
   - [[#search][Search]]
   - [[#traverse-a-cursor-using-its-iterator][Traverse a cursor using its iterator]]
+  - [[#find-similar-documents][Find similar documents]]
   - [[#references][References]]
 
 ** System environment
@@ -89,6 +90,13 @@ for result in results:
 #+BEGIN_SRC python
 for doc in solr.search('*:*',fl='id',sort='id ASC',cursorMark='*'):
     print(doc['id'])
+#+END_SRC
+
+** Find similar documents
+
+#+BEGIN_SRC python
+similar = solr.more_like_this(q='id:doc_2', mltfl='text')
+similar
 #+END_SRC
 
 ** References
